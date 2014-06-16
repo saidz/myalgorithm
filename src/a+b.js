@@ -41,7 +41,7 @@ function multi(a, b) {
     }
     return a > 0 ? result : -result;
 }
-// TODO :除法
+// 除法
 function div(a, b) {
     if (a === 0) return 0;
     if (b === 0) return 'NaN';
@@ -72,12 +72,12 @@ log(sub, sub(-5, 1)); // -6
 log(sub, sub(-5, -1)); // -4
 log(sub, sub(-5, 0)); // -5
 console.log('....................multi.................');
-log(multi, multi(5, 1)); // 4
-log(multi, multi(-5, 1)); // -6
-log(multi, multi(-5, -1)); // -4
-log(multi, multi(-5, 0)); // -5
-log(multi, multi(-500, 100)); // -5
-console.log('....................multi.................');
+log(multi, multi(5, 1)); // 5
+log(multi, multi(-5, 1)); // -5
+log(multi, multi(-5, -1)); // 5
+log(multi, multi(-5, 0)); // 0
+log(multi, multi(-500, 100)); // -50000
+console.log('....................div.................');
 log(div, div(0, 1)); // 0
 log(div, div(1, 0)); // NaN
 log(div, div(1100, 30)); // 36
