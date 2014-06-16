@@ -43,17 +43,19 @@ function multi(a, b) {
 }
 // TODO :除法
 function div(a, b) {
-    if(a===0) return 0;
-    if(b===0) return 'NaN';
-    var max = Math.max(a,-a);
-    var i= j = 0;
-    while(j<max){
-        if(a>=multi(j,b)&&a<multi(++j,b)){
+    if (a === 0) return 0;
+    if (b === 0) return 'NaN';
+    var flag = Math.max(a, b) > 0 && Math.min(a, b) < 0 ? -1 : 1;
+    var a = Math.max(a, -a);
+    var b = Math.max(b, -b);
+    var i = j = 0;
+    while (true) {
+        if (a >= multi(j, b) && a < multi(++j, b)) {
             break;
         }
         i++;
     }
-   return i;
+    return flag<0 ? -i : i;
 }
 
 function log(fn, result) {
@@ -78,4 +80,8 @@ log(multi, multi(-500, 100)); // -5
 console.log('....................multi.................');
 log(div, div(0, 1)); // 0
 log(div, div(1, 0)); // NaN
-log(div, div(-1100, -30)); // 1
+log(div, div(1100, 30)); // 36
+log(div, div(1100, -30)); // -36
+log(div, div(-1100, 30)); // -36
+log(div, div(-10, 30)); // 0
+log(div, div(10, 30)); // 0
