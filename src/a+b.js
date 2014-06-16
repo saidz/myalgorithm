@@ -49,8 +49,9 @@ function div(a, b) {
     var i= j = 0;
     while(j<max){
         if(a>=multi(j,b)&&a<multi(++j,b)){
-            i++;
+            break;
         }
+        i++;
     }
    return i;
 }
@@ -75,6 +76,6 @@ log(multi, multi(-5, -1)); // -4
 log(multi, multi(-5, 0)); // -5
 log(multi, multi(-500, 100)); // -5
 console.log('....................multi.................');
-log(div, div(0, 1)); // 4
-log(div, div(1, 0)); // 4
-log(div, div(4, 1)); // 4
+log(div, div(0, 1)); // 0
+log(div, div(1, 0)); // NaN
+log(div, div(-1100, -30)); // 1
