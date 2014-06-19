@@ -1,0 +1,25 @@
+{
+  "name": "myalgrithm",
+  "version": "0.0.1",
+  "description": "algrithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/saidz/myalgrithm.git"
+  },
+  "keywords": [
+    "algrithm"
+  ],
+  "author": "saidz",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/saidz/myalgrithm/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.20.1",
+    "should": "~4.0.4"
+  }
+}
